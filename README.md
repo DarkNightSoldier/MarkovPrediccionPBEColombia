@@ -1,11 +1,13 @@
 # Modelado y Predicción del Precio de Bolsa de Energía en Colombia (PBE)
 
-Este repositorio contiene una **aplicación en Streamlit** para pronóstico **horario** del **Precio de Bolsa de Energía (PBE)** en Colombia, utilizando datos históricos de **SIMEM** (dataset **EC6945**) y comparando dos enfoques:
+Este repositorio contiene un **tablero en Streamlit** para pronóstico **horario** del **Precio de Bolsa de Energía (PBE)** en Colombia, utilizando datos históricos de **SIMEM** (dataset **EC6945**) y comparando dos enfoques:
 
 - **Modelo 1 — HMM + ML:** Modelo Oculto de Markov (HMM) gaussiano sobre **retornos logarítmicos** para inferir regímenes, combinado con una **mezcla de expertos** basada en modelos de **boosting**.
 - **Modelo 2 — MC-horaria:** **Modelo de Cadenas de Markov No Homogéneas por Hora** (MC-horaria) sobre **estados discretos** del precio.
 
-> Nota: El informe del proyecto (LaTeX) está en `main.tex`.
+**Enlace a la aplicación:** [https://markovprediccionpbecol.streamlit.app/](https://markovprediccionpbecol.streamlit.app/)
+**Elaborado por:** Alejandro Higuera Castro
+**Curso:** Cadenas de Markov 2023 y 2025
 
 ---
 
@@ -132,15 +134,6 @@ streamlit run app.py
 
 - `main.tex`  
   Informe LaTeX del proyecto (marco teórico, metodología, resultados y conclusiones).
-
----
-
-## Consideraciones y notas
-
-- La descarga depende de disponibilidad de **SIMEM / pydataxm** y conectividad a internet.
-- Si el rango no devuelve registros:
-  - Ajusta las fechas o cambia `CodigoVariable`.
-- En discretización por cuantiles, si hay muchos valores repetidos, el número efectivo de estados puede reducirse.
 
 ---
 
